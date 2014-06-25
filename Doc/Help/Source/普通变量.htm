@@ -1,0 +1,158 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>普通变量</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center"><font color="#008000">普通变量</font></h1>
+<hr>
+<p align="left"><font size="2">普通变量就是通常意义上的变量，分为公有变量，私有变量，局部变量。他们的区别就是作用范围不同。</font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: -7.1pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-left: 7.1pt; margin-top: 0; margin-bottom: 0"><b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">局部变量</span></b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">是一个函数内部的变量，只能在函数内部使用；</span><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: -7.1pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-left: 7.1pt; margin-top: 0; margin-bottom: 0"><b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">私有变量</span></b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">是一个脚本内部的变量，只能在本脚本内使用</span><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">；</span><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN"></o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: -7.1pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-left: 7.1pt; margin-top: 0; margin-bottom: 0"><b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">公有变量</span></b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">所有的脚本都可以共享使用，必须指定一个确定地址</span><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">。
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><b>如何声明</b></p>
+<blockquote>
+  <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">声明私有或局部变量的语法是:<o:p>
+  &nbsp;</span></p> 
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">
+</o:p></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">private</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt"> var1[,var2[,var3]...]<o:p> 
+</o:p></span></p> 
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;
+mso-ansi-language:ZH-CN">如</span><span lang="EN-US" style="font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">:    
+<b>private</b> a,b</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:   
+&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">在默认情况下</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">,私有或局部</span><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">变量使用前不用声明</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt">,</span><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">除非使用</span><a href="编译指令.htm"><span lang="EN-US" style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt"><font color="#0000FF">#explicit</font></span></a><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">编译指令</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>强制声明变量。</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; font-family: 宋体; mso-font-kerning: 0pt">因此</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt">，以下使用是正确的：</span></p>
+  <ul>
+    <li>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New"><span style="font-size: 10.0pt; mso-font-kerning: 0pt">a  
+      = <font color="#FF0000">&quot;Hello World&quot;</font></span><font color="#FF0000"></font></font><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font color="#FF0000">&nbsp;</font></span></li> 
+    <li>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font color="#0000FF" face="Courier New">#</font><font color="#0000FF">ex</font><font color="#0000FF" face="Courier New">plicit</font></span></p>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New" color="#0000FF">private</font><font face="Courier New"><font color="#FF0000"> 
+      </font>a</font></span></p>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New">a 
+      =</font><font face="Courier New" color="#FF0000"> &quot;Hello world&quot;</font></span></li>
+  </ul>
+  <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">但下面的程序会引发编译错误：</span></p>
+  <ul>
+    <li>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">b</span><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font face="Courier New"> 
+      = a</font> <font face="Courier New">+ 1&nbsp; <i><font color="#008080">//a</font></i></font><i><font color="#008080">没有声明或赋值</font></i></span></li> 
+    <li>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font color="#0000FF" face="Courier New">#</font><font color="#0000FF">ex</font><font color="#0000FF" face="Courier New">plicit</font></span></p>
+      <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New">a 
+      =</font><font face="Courier New" color="#FF0000"> &quot;Hello world&quot;</font></span></li>
+  </ul>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">公有变量与一个地址值对应(1..255),不同脚本可以通过这个地址值共享数据.声明公有变量:<o:p>
+</o:p></span></p>  
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">public</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt">  var address<o:p> 
+&nbsp; 
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">如</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt">: <font color="#0000FF"> public</font> a 10<span style="mso-spacerun: yes">&nbsp;<font color="#008080">  
+</font></span><font color="#008080">//公有变量a地址为10</font><o:p> 
+&nbsp;  
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Courier New&quot;;
+mso-font-kerning:0pt"> 
+</o:p> 
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#FF0000">注意</font>：公有变量只是依靠地址识别，而不是变量名</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">如脚本一中：</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 36.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">public</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt"> a 10<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 36.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">public</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt"> b 11<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">如脚本二中：</span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 36.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">public</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt"> <font color="#0000FF"> </font> a 11<o:p> 
+</o:p> 
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 36.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:0pt"><font color="#0000FF">public</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Courier New&quot;;mso-font-kerning:
+0pt"> b 10<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">此时<span lang="EN-US">:   
+脚本1中的a = 脚本2中的b, 脚本1中的b = 脚本2中的a</span></span><span lang="EN-US" style="font-size:10.0pt;  
+font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt">最好把用到的所有公有变量都放在同一个文件中，再在各自文件中使用<span lang="EN-US"><a href="Include.htm">include</a></span>命令包含这个文件</span><span lang="EN-US" style="font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+0pt"><o:p>
+</o:p>
+</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"></o:p>
+  </span></p>
+</blockquote>
+<p class="MsoNormal" align="left" style="text-indent: -7.1pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-left: 7.1pt; margin-top: 0; margin-bottom: 0"><b><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">初值：</span></b></p>
+<blockquote>
+  <p class="MsoNormal" align="left" style="text-indent: -7.1pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-left: 7.1pt; margin-top: 0; margin-bottom: 0"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN"><font size="2">变量未设初值时，系统自动为其设定初值为整型的0。</font></span></p>
+</blockquote>
+
+</body>
+
+</html>

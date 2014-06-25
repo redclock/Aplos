@@ -1,0 +1,494 @@
+* 编译开始
+#####include winctrl
+* 包含文件:d:\myworks\delphi\aplos\test\winctrl.apl
+#####const Main = 0
+* 新常量 Main = 0
+#####const EVT_CLICK      = 0
+* 新常量 EVT_CLICK = 0
+#####const EVT_MOUSEMOVE  = 1
+* 新常量 EVT_MOUSEMOVE = 1
+#####const EVT_MOUSEUP    = 2
+* 新常量 EVT_MOUSEUP = 2
+#####const EVT_MOUSEDOWN  = 3
+* 新常量 EVT_MOUSEDOWN = 3
+#####const EVT_KEYDOWN    = 4
+* 新常量 EVT_KEYDOWN = 4
+#####const EVT_KEYUP      = 5
+* 新常量 EVT_KEYUP = 5
+#####const EVT_KEYPRESS   = 6
+* 新常量 EVT_KEYPRESS = 6
+#####const EVT_PAINT      = 7
+* 新常量 EVT_PAINT = 7
+#####
+#####const AL_NONE     = 0
+* 新常量 AL_NONE = 0
+#####const AL_TOP      = 1
+* 新常量 AL_TOP = 1
+#####const AL_BOTTOM   = 2
+* 新常量 AL_BOTTOM = 2
+#####const AL_LEFT     = 3
+* 新常量 AL_LEFT = 3
+#####const AL_RIGHT    = 4
+* 新常量 AL_RIGHT = 4
+#####const AL_CLIENT   = 5
+* 新常量 AL_CLIENT = 5
+#####
+#####const WS_OVERLAPPED       = 0x00000000
+* 新常量 WS_OVERLAPPED = 0x00000000
+#####const WS_POPUP            = 0x80000000
+* 新常量 WS_POPUP = 0x80000000
+#####const WS_CHILD            = 0x40000000
+* 新常量 WS_CHILD = 0x40000000
+#####const WS_MINIMIZE         = 0x20000000
+* 新常量 WS_MINIMIZE = 0x20000000
+#####const WS_VISIBLE          = 0x10000000
+* 新常量 WS_VISIBLE = 0x10000000
+#####const WS_DISABLED         = 0x08000000
+* 新常量 WS_DISABLED = 0x08000000
+#####const WS_CLIPSIBLINGS     = 0x04000000
+* 新常量 WS_CLIPSIBLINGS = 0x04000000
+#####const WS_CLIPCHILDREN     = 0x02000000
+* 新常量 WS_CLIPCHILDREN = 0x02000000
+#####const WS_MAXIMIZE         = 0x01000000
+* 新常量 WS_MAXIMIZE = 0x01000000
+#####const WS_CAPTION          = 0x00C00000     // WS_BORDER | WS_DLGFRAME
+* 新常量 WS_CAPTION = 0x00C00000
+#####const WS_BORDER           = 0x00800000
+* 新常量 WS_BORDER = 0x00800000
+#####const WS_DLGFRAME         = 0x00400000
+* 新常量 WS_DLGFRAME = 0x00400000
+#####const WS_VSCROLL          = 0x00200000
+* 新常量 WS_VSCROLL = 0x00200000
+#####const WS_HSCROLL          = 0x00100000
+* 新常量 WS_HSCROLL = 0x00100000
+#####const WS_SYSMENU          = 0x00080000
+* 新常量 WS_SYSMENU = 0x00080000
+#####const WS_THICKFRAME       = 0x00040000
+* 新常量 WS_THICKFRAME = 0x00040000
+#####const WS_GROUP            = 0x00020000
+* 新常量 WS_GROUP = 0x00020000
+#####const WS_TABSTOP          = 0x00010000
+* 新常量 WS_TABSTOP = 0x00010000
+#####
+#####const WS_MINIMIZEBOX      = 0x00020000
+* 新常量 WS_MINIMIZEBOX = 0x00020000
+#####const WS_MAXIMIZEBOX      = 0x00010000
+* 新常量 WS_MAXIMIZEBOX = 0x00010000
+#####
+#####
+#####const WS_TILED            = WS_OVERLAPPED
+* 新常量 WS_TILED = WS_OVERLAPPED
+#####const WS_ICONIC           = WS_MINIMIZE
+* 新常量 WS_ICONIC = WS_MINIMIZE
+#####const WS_SIZEBOX          = WS_THICKFRAME
+* 新常量 WS_SIZEBOX = WS_THICKFRAME
+#####const WS_TILEDWINDOW      = WS_OVERLAPPEDWINDOW
+* 新常量 WS_TILEDWINDOW = WS_OVERLAPPEDWINDOW
+#####
+#####// Common Window Styles
+#####
+#####const WS_OVERLAPPEDWINDOW = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX)
+* 新常量 WS_OVERLAPPEDWINDOW = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX)
+#####
+#####const WS_POPUPWINDOW      = (WS_POPUP | WS_BORDER | WS_SYSMENU)
+* 新常量 WS_POPUPWINDOW = (WS_POPUP | WS_BORDER | WS_SYSMENU)
+#####
+#####const WS_CHILDWINDOW      = (WS_CHILD)
+* 新常量 WS_CHILDWINDOW = (WS_CHILD)
+#####
+#####//* Extended Window Styles */
+#####const WS_EX_DLGMODALFRAME     = 0x00000001
+* 新常量 WS_EX_DLGMODALFRAME = 0x00000001
+#####const WS_EX_NOPARENTNOTIFY    = 0x00000004
+* 新常量 WS_EX_NOPARENTNOTIFY = 0x00000004
+#####const WS_EX_TOPMOST           = 0x00000008
+* 新常量 WS_EX_TOPMOST = 0x00000008
+#####const WS_EX_ACCEPTFILES       = 0x00000010
+* 新常量 WS_EX_ACCEPTFILES = 0x00000010
+#####const WS_EX_TRANSPARENT       = 0x00000020
+* 新常量 WS_EX_TRANSPARENT = 0x00000020
+#####
+#####const WS_EX_MDICHILD          = 0x00000040
+* 新常量 WS_EX_MDICHILD = 0x00000040
+#####const WS_EX_TOOLWINDOW        = 0x00000080
+* 新常量 WS_EX_TOOLWINDOW = 0x00000080
+#####const WS_EX_WINDOWEDGE        = 0x00000100
+* 新常量 WS_EX_WINDOWEDGE = 0x00000100
+#####const WS_EX_CLIENTEDGE        = 0x00000200
+* 新常量 WS_EX_CLIENTEDGE = 0x00000200
+#####const WS_EX_CONTEXTHELP       = 0x00000400
+* 新常量 WS_EX_CONTEXTHELP = 0x00000400
+#####
+#####const WS_EX_RIGHT             = 0x00001000
+* 新常量 WS_EX_RIGHT = 0x00001000
+#####const WS_EX_LEFT              = 0x00000000
+* 新常量 WS_EX_LEFT = 0x00000000
+#####const WS_EX_RTLREADING        = 0x00002000
+* 新常量 WS_EX_RTLREADING = 0x00002000
+#####const WS_EX_LTRREADING        = 0x00000000
+* 新常量 WS_EX_LTRREADING = 0x00000000
+#####const WS_EX_LEFTSCROLLBAR     = 0x00004000
+* 新常量 WS_EX_LEFTSCROLLBAR = 0x00004000
+#####const WS_EX_RIGHTSCROLLBAR    = 0x00000000
+* 新常量 WS_EX_RIGHTSCROLLBAR = 0x00000000
+#####
+#####const WS_EX_CONTROLPARENT     = 0x00010000
+* 新常量 WS_EX_CONTROLPARENT = 0x00010000
+#####const WS_EX_STATICEDGE        = 0x00020000
+* 新常量 WS_EX_STATICEDGE = 0x00020000
+#####const WS_EX_APPWINDOW         = 0x00040000
+* 新常量 WS_EX_APPWINDOW = 0x00040000
+#####
+#####
+#####const WS_EX_OVERLAPPEDWINDOW  = (WS_EX_WINDOWEDGE | WS_EX_CLIENTEDGE)
+* 新常量 WS_EX_OVERLAPPEDWINDOW = (WS_EX_WINDOWEDGE | WS_EX_CLIENTEDGE)
+#####const WS_EX_PALETTEWINDOW     = (WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST)
+* 新常量 WS_EX_PALETTEWINDOW = (WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST)
+#####
+#####const WS_EX_LAYERED           = 0x00080000
+* 新常量 WS_EX_LAYERED = 0x00080000
+#####
+#####const WS_EX_NOINHERITLAYOUT   = 0x00100000 // Disable inheritence of mirroring by children
+* 新常量 WS_EX_NOINHERITLAYOUT = 0x00100000
+#####const WS_EX_LAYOUTRTL         = 0x00400000 // Right to left mirroring
+* 新常量 WS_EX_LAYOUTRTL = 0x00400000
+#####const WS_EX_COMPOSITED        = 0x02000000
+* 新常量 WS_EX_COMPOSITED = 0x02000000
+#####const WS_EX_NOACTIVATE        = 0x08000000
+* 新常量 WS_EX_NOACTIVATE = 0x08000000
+#####declare NumClick(sender)
+声明新函数:( NumClick(sender)) # 0, No.=1
+#####declare OpClick(sender)
+声明新函数:( OpClick(sender)) # 1, No.=2
+#####declare ClearClick(sender)
+声明新函数:( ClearClick(sender)) # 2, No.=3
+#####const ES_RIGHT = 0x0002
+* 新常量 ES_RIGHT = 0x0002
+#####if _VMType = 1
+Pushv _VMType @ 516
+Pushi 1
+Calculate =
+If Not Then <addr>
+#####Writeln("请在窗口模式运行")
+Pushs 请在窗口模式运行
+Pushi 1
+Call System Function:Writeln()
+Pop Null
+#####exit
+Exit
+#####endif
+#####//变量初值
+#####NumChar = "1234567890"
+Pushs 1234567890
+* 新私有变量:NumChar @ 257
+Pop NumChar @ 257
+#####OpChar  = "+-*/="
+Pushs +-*/=
+* 新私有变量:OpChar @ 258
+Pop OpChar @ 258
+#####NumStr = ""
+Pushs 
+* 新私有变量:NumStr @ 259
+Pop NumStr @ 259
+#####lastop = "="
+Pushs =
+* 新私有变量:lastop @ 260
+Pop lastop @ 260
+#####Result = 0.0
+Pushf 0
+* 新私有变量:Result @ 261
+Pop Result @ 261
+#####//窗体属性：不能改变大小
+#####Main.SetStyle(WS_CAPTION|WS_BORDER|WS_POPUP|WS_SYSMENU,false)
+Pushi 0
+Pushi 12582912
+Pushi 8388608
+Calculate |
+Pushi -2147483648
+Calculate |
+Pushi 524288
+Calculate |
+Pushb False
+Call System Function:SetStyle()
+Pop Null
+#####Main.SetText("计算器")
+Pushi 0
+Pushs 计算器
+Call System Function:SetText()
+Pop Null
+#####Main.SetSize(140, 170)
+Pushi 0
+Pushi 140
+Pushi 170
+Call System Function:SetSize()
+Pop Null
+#####//加入数字框：不可编辑，右对齐
+#####NumBox = Main.AddEdit("0", 10, 10, 115, 20)
+Pushi 0
+Pushs 0
+Pushi 10
+Pushi 10
+Pushi 115
+Pushi 20
+Call System Function:AddEdit()
+* 新私有变量:NumBox @ 262
+Pop NumBox @ 262
+#####NumBox.SetStyle(ES_RIGHT, false)
+Pushv NumBox @ 262
+Pushi 2
+Pushb False
+Call System Function:SetStyle()
+Pop Null
+#####NumBox.SetEnabled(false)
+Pushv NumBox @ 262
+Pushb False
+Call System Function:SetEnabled()
+Pop Null
+#####//添加数字按钮
+#####for i = 0 to 9
+Pushi 0
+* 新私有变量:i @ 263
+Pop i @ 263
+Pushv i @ 263
+Pushi 9
+Calculate >
+If <Addr>
+#####bt = Main.AddButton(NumChar[i+1], 10+i%4*30, 40+$int(i/4)*25,  25, 20)
+Pushi 0
+Pushv NumChar @ 257
+Pushv i @ 263
+Pushi 1
+Calculate +
+Calculate []
+Pushi 10
+Pushv i @ 263
+Pushi 4
+Calculate %
+Pushi 30
+Calculate *
+Calculate +
+Pushi 40
+Pushv i @ 263
+Pushi 4
+Calculate /
+Calculate <integer>
+Pushi 25
+Calculate *
+Calculate +
+Pushi 25
+Pushi 20
+Call System Function:AddButton()
+* 新私有变量:bt @ 264
+Pop bt @ 264
+#####bt.SetEvent(EVT_CLICK, NumClick)
+Pushv bt @ 264
+Pushi 0
+Pushi 1
+Call System Function:SetEvent()
+Pop Null
+#####next
+Inc <for_var> @263
+Goto *-120
+#####//添加运算按钮
+#####for i = 10 to 14
+Pushi 10
+Pop i @ 263
+Pushv i @ 263
+Pushi 14
+Calculate >
+If <Addr>
+#####bt = Main.AddButton(OpChar[i-9], 10+i%4*30, 40+$int(i/4)*25,  25, 20)
+Pushi 0
+Pushv OpChar @ 258
+Pushv i @ 263
+Pushi 9
+Calculate -
+Calculate []
+Pushi 10
+Pushv i @ 263
+Pushi 4
+Calculate %
+Pushi 30
+Calculate *
+Calculate +
+Pushi 40
+Pushv i @ 263
+Pushi 4
+Calculate /
+Calculate <integer>
+Pushi 25
+Calculate *
+Calculate +
+Pushi 25
+Pushi 20
+Call System Function:AddButton()
+Pop bt @ 264
+#####bt.SetEvent(EVT_CLICK, OpClick)
+Pushv bt @ 264
+Pushi 0
+Pushi 2
+Call System Function:SetEvent()
+Pop Null
+#####next
+Inc <for_var> @263
+Goto *-120
+#####//添加C按钮
+#####bt = Main.AddButton("C", 10+15%4*30, 40+$int(15/4)*25,  25, 20)
+Pushi 0
+Pushs C
+Pushi 10
+Pushi 15
+Pushi 4
+Calculate %
+Pushi 30
+Calculate *
+Calculate +
+Pushi 40
+Pushi 15
+Pushi 4
+Calculate /
+Calculate <integer>
+Pushi 25
+Calculate *
+Calculate +
+Pushi 25
+Pushi 20
+Call System Function:AddButton()
+Pop bt @ 264
+#####bt.SetEvent(EVT_CLICK, ClearClick)
+Pushv bt @ 264
+Pushi 0
+Pushi 3
+Call System Function:SetEvent()
+Pop Null
+#####//等待事件
+#####suspend
+Suspend
+#####
+#####//数字按钮事件
+#####function NumClick(sender)
+定义新函数:(NumClick(sender)) # 0, No.=1
+* 新局部变量:sender @ 769
+Pop sender @ 769
+#####NumStr = NumStr+sender.GetText()
+Pushv NumStr @ 259
+Pushv sender @ 769
+Call System Function:GetText()
+Calculate +
+Pop NumStr @ 259
+#####NumBox.SetText(NumStr)
+Pushv NumBox @ 262
+Pushv NumStr @ 259
+Call System Function:SetText()
+Pop Null
+#####end
+* 更新 Goto 地址
+Pushi 0
+Return
+* 函数结束
+#####//运算按钮事件
+#####function OpClick(sender)
+定义新函数:(OpClick(sender)) # 1, No.=2
+* 新局部变量:sender @ 769
+Pop sender @ 769
+#####a = $float(NumBox.GetText())
+Pushv NumBox @ 262
+Call System Function:GetText()
+Calculate <float>
+* 新局部变量:a @ 770
+Pop a @ 770
+#####if lastop = "+"
+Pushv lastop @ 260
+Pushs +
+Calculate =
+If Not Then <addr>
+#####Result = Result + a
+Pushv Result @ 261
+Pushv a @ 770
+Calculate +
+Pop Result @ 261
+#####else if lastop = "-"
+GoTo <addr>
+Pushv lastop @ 260
+Pushs -
+Calculate =
+IfNot <Addr>
+#####Result = Result - a
+Pushv Result @ 261
+Pushv a @ 770
+Calculate -
+Pop Result @ 261
+#####else if lastop = "*"
+GoTo <addr>
+Pushv lastop @ 260
+Pushs *
+Calculate =
+IfNot <Addr>
+#####Result = Result * a
+Pushv Result @ 261
+Pushv a @ 770
+Calculate *
+Pop Result @ 261
+#####else if lastop = "/"
+GoTo <addr>
+Pushv lastop @ 260
+Pushs /
+Calculate =
+IfNot <Addr>
+#####Result = Result / a
+Pushv Result @ 261
+Pushv a @ 770
+Calculate /
+Pop Result @ 261
+#####else if lastop = "="
+GoTo <addr>
+Pushv lastop @ 260
+Pushs =
+Calculate =
+IfNot <Addr>
+#####Result =  a
+Pushv a @ 770
+Pop Result @ 261
+#####endif
+#####lastop = sender.GetText()
+Pushv sender @ 769
+Call System Function:GetText()
+Pop lastop @ 260
+#####NumStr = ""
+Pushs 
+Pop NumStr @ 259
+#####NumBox.SetText(Result)
+Pushv NumBox @ 262
+Pushv Result @ 261
+Call System Function:SetText()
+Pop Null
+#####end
+* 更新 Goto 地址
+Pushi 0
+Return
+* 函数结束
+#####//C按钮事件
+#####function ClearClick(sender)
+定义新函数:(ClearClick(sender)) # 2, No.=3
+* 新局部变量:sender @ 769
+Pop sender @ 769
+#####NumStr =""
+Pushs 
+Pop NumStr @ 259
+#####Result = 0
+Pushi 0
+Pop Result @ 261
+#####NumBox.SetText("0")
+Pushv NumBox @ 262
+Pushs 0
+Call System Function:SetText()
+Pop Null
+#####end
+* 更新 Goto 地址
+Pushi 0
+Return
+* 函数结束
+#####
+* 更新 Goto 地址
+* 结束编译
+脚本入口点：238

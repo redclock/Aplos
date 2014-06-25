@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>使用脚本编辑器开发APLOS脚本</title>
+</head>
+
+<body>
+
+<h1 align="center">使用脚本编辑器开发APLOS脚本</h1>
+<p>&nbsp;&nbsp;&nbsp; APLOS提供了脚本编辑器，可在其中进行脚本的编辑，编译，运行，使用十分方便。这个教程将一步一步教你使用它。</p> 
+<p>打开脚本编辑器，其界面如图。我们就在编辑区编写代码。</p>
+<p><img border="0" src="教程1.jpg" width="544" height="458"></p>
+<p>首先，我们要写一段小程序。将下面代码输入编辑区：</p>
+<hr>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><i><font face="Courier New" size="3" color="#008080">//</font><font size="3" color="#008080">功能：输出</font><font face="Courier New" size="3" color="#008080">1</font><font size="3" color="#008080">到</font><font face="Courier New" size="3" color="#008080">100</font><font size="3" color="#008080">的和</font></i></p>
+<p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><i><font face="Courier New" size="3">//</font><font color="#008080" size="3">运行模式：控制台</font></i><font size="3"><br>
+<br>
+</font><font face="Courier New" size="3">
+sum=0<br>
+<font color="#0000FF">for</font> index=1 <font color="#0000FF"> to</font> 100&nbsp;</font></p> 
+<p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;  
+sum=sum+indx</font></p>
+<p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="3" color="#0000FF">next</font><font face="Courier New" size="3"><br>
+Writeln(<font color="#FF0000">"1+2+...+100 = &quot;</font>, sum)</font></p>
+<hr>
+<p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0">在编写的过程中，你会发现不同的语法元素被不同的颜色标识出来。</p>
+<p style="line-height: 100%">输入完毕之后，就要运行脚本。点击菜单【程序】<font size="2">－</font><font size="3">【运行】</font><font size="2">。</font><font size="3">此时，编辑器提示，要先将脚本保存。点击【是】，在保存对话框中将脚本保存为sum.apl。</font></p>
+<p style="line-height: 100%"><font size="3">但是，脚本运行后并未如想象中那般输出结果。别着急，先看看最底下的消息区显示的编译器的输出信息：</font></p>
+<hr>
+<p style="line-height: 100%"><font face="System">Aplos脚本编译器.  By Redclock&nbsp;<br>
+版权所有    2004.3-2005.5<br> 
+正在编译...<br>
+Compile Error:未定义的变量:indx.<br> 
+文件:d:\myworks\delphi\aplos\test\sum.apl:<br>
+有错误发生 行(6):<br> 
+sum=sum+indx</font></p>
+<hr>
+<p style="line-height: 100%">原来是出错了。按提示找到第6行，将其修改为：sum=sum+index。再次运行，出现控制台窗口：</p>
+<table border="0" width="100%" bgcolor="#000000">
+  <tr>
+    <td width="100%">
+      <p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><font color="#C0C0C0" size="3" face="Fixedsys">1+2+...+100 = 
+      5050</font></p>
+      <p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><font size="3" face="System" color="#C0C0C0">按任意键结束...</font></td>
+  </tr>
+</table>
+<p style="line-height: 100%">结果正确。</p>
+<p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><br>
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>数组</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none"><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN"><font size="6" color="#008000">数组</font></span></h1>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><b>如何创建数组</b></p>
+<blockquote>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><font size="2">数组是基本类型，<span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">一维数组可以用NewArray()函数创建,如:<o:p>
+</o:p>  
+</span></font></p>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">a = NewArray(10), 此时a数组下标为0到9，初始时均为整型的0。&nbsp; 
+</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">在脚本中，数组都是动态的，可以用Resize函数改变数组的大小。</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">如: Resize(a, 20), 此时a就可以有20个元素了,前10个元素值保留.</span><b><span lang="EN-US" style="font-size:10.0pt;  
+font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"></o:p>
+</span></b></p>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">建立“数组的数组”就相当于建立二维以上的数组,可以将一维数组的值设为数组,如:<o:p>
+</o:p>  
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font face="Courier New">a=NewArray(10)<o:p>
+</o:p> 
+</font>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New"><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font color="#0000FF">for</font></span><span lang="EN-US" style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"> i=0 <font color="#0000FF">to</font> 10-1<o:p> 
+</o:p> 
+</span></font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font face="Courier New">&nbsp;  
+a[i]=NewArray(10)<o:p>
+</o:p>  
+</font>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font face="Courier New"><font color="#0000FF">next<o:p>
+</font><b> 
+&nbsp;</b></font>
+</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">就建立了一个<span lang="EN-US">10x10的二维数组。</span></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">也可以使用标准库<span lang="EN-US">stdlib中的CreateArray2D()来建立二维数组。
+</span></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">stdlib中还定义了一个MakeArray()函数，用于由初值建立函数。</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">如：</span></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">include</font>  
+  stdlib</font></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">a 
+  = MakeArray(1, 2, 3, 4, 5, <font color="#FF0000">&quot;a&quot;</font>)</span></font></p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font size="2">此时 
+  </font><font face="Courier New" size="2">a[0]=1, a[1] = 2, a[5] = <font color="#FF0000">&quot;a&quot;</font></font><font color="#FF0000" size="2">&nbsp;</font></span></p> 
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+</blockquote>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><b><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN"><font size="3">使用数组元素</font></span></b></p>
+<blockquote>
+  <p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">数组通过下标存取，操作符为[]：</font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">为数组元素赋值: a[1]=1<o:p>  
+ 取出数组元素值: b=a[1]<o:p>  
+</o:p>  
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN"><o:p>
+</o:p> 
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt"><font size="2">二维数组用如下的方法来引用:<o:p>
+</o:p>  
+</font>
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">赋值：a[0][1]=1<o:p>
+</o:p>  
+</span></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">a[1][I]=a[1][I+1]等等<o:p>
+&nbsp; 
+</span></p>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">用<span lang="EN-US">Bound(array)函数来得到数组的长度.<o:p>
+&nbsp; 
+</span></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">数组元素可以为不同类型，如：</span></p>
+
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New">a[1]=1</font></span></p>
+
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New">a[2]=<font color="#FF0000">&quot;abc&quot;</font></font></span></p>
+
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font face="Courier New">a[3]=true</o:p>
+</font></span></p>
+
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+</blockquote>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><b><font size="3"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">实际上，数组变量是一个引用</span></font></b></p>
+<blockquote>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">当调用NewArray()时，数组在内存中创建，并赋给变量一个引用。因此执行：</span></font></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">a = NewArray(10) 
+</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">b 
+= a </span></font></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">后，a和b引用了同一段内存，赋值b[1]=10会导致a[1]也变为10。</span></font></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">若要防止这种情况发生，请使用stdlib  
+的 CopyArray()函数</span></font></p> 
+</blockquote>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US"><font size="3"><b>数组内存是会被自动回收的</b></font></span></p>
+<blockquote>
+  <p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+  <p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2" face="宋体"><span style="mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">&nbsp;&nbsp; 
+  在数组内部，记录着每个变量对它的引用。当将数组赋给其他变量时会增加引用计数，当数组变量结束作用范围或改变为其他值时会减少引用计数。</span></font></p>
+  <p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>
+  <p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2" face="宋体"><span style="mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt" lang="EN-US">&nbsp;&nbsp; 
+  当一个数组的引用计数为0时，这个数组就会被自动删除。因此，一般的数组都会被及时清除，不会造成内存泄漏。但当数组被赋给一个公有变量时，数组可能长时间不被删除而占用内存。</o:p>
+  </span></font></p>
+</blockquote>
+
+</body>
+
+</html>

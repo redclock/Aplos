@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>函数声明定义</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center"><font color="#008000">函数声明定义</font></h1>
+<p><font size="2">声明函数用如下的书写格式:</font></p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+<font size="2"><font color="#0000FF">declare </font>函数名(参数1, 参数2, ...)</font></p>   
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">声明了的函数才可以被调用。声明只是宣告存在一个函数，但不知道其内容如何，所以还需要定义函数。</font><font size="2"><br>     
+</font><br>
+<font size="2">
+定义函数用如下的书写格式:</font></p> 
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+<font size="2"><font color="#0000FF">function</font> 函数名(参数1, 参数2, ...)<br>       
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">private </font> 局部变量1, 局部变量2, ...<br>       
+&nbsp;<font face="Courier New">&nbsp;&nbsp; ......</font><br>  
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">re</font><font face="Courier New"><font color="#0000FF">turn</font> </font> 返回值</font></p>   
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+<font size="2"><font face="Courier New">&nbsp;&nbsp;&nbsp; ......</font><br>  
+&nbsp;<font color="#0000FF">end</font> 返回值<br>      
+<br>
+返回值是可选的，若没有返回值，系统自动返回0。局部变量只在函数内部起作用，可以不声明。函数调用可以递归。</font></p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+　</p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+　</p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+<font size="2">若定义一个函数时，编译器发现该函数没有声明，就会按定义的参数自动声明一个函数。</font></p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+　</p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+<font size="2">下面是一个求最大公约数函数的例子：</font></p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">function 
+</font> Gcd(a, b)<br>     
+&nbsp; <font color="#0000FF">if</font> a > b&nbsp;&nbsp;&nbsp; <font color="#008080">//</font></font><font size="2">总将小值赋给</font><font face="Courier New" size="2"><font color="#008080">a</font><br>   
+&nbsp;&nbsp;&nbsp; t = a</font></p>   
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;   
+a = b</font></p>   
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;   
+b = t<br>   
+&nbsp; <font color="#0000FF">endif</font><br> 
+&nbsp; if (b % a) : a = Gcd(b % a, a)<br>    
+<font color="#0000FF"> 
+end</font> a</font></p>    
+<p><font size="2">可以定义不限参数个数的函数，方法是在<font color="#0000FF">function</font>后加<font color="#0000FF">open</font>关键字。此时函数名后的参数表无意义，需要自己用<a href="push.htm"><font color="#0000FF">Pop</font></a>语句将参数从栈中弹出。</font></p>
+<p><font size="2">如定义一个求最大值的函数，使用了不限参数个数的方法：</font></p>
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">function open</font> Max()<br>     
+&nbsp; <font color="#0000FF">pop</font> n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#008080">//n</font></font><font color="#008000" size="2">是编译器压入栈中的参数个数</font><font size="2"><br>   
+</font><font face="Courier New" size="2">   
+&nbsp; <font color="#0000FF">if</font> n&lt;=0: <font color="#0000FF"> return</font><br>   
+&nbsp; <font color="#0000FF">pop</font> a<br>     
+&nbsp; <font color="#0000FF">for</font> i=2 <font color="#0000FF"> to</font> n<br>     
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">pop</font> b<br>     
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">if</font> a&lt;b: a=b<br>     
+&nbsp; <font color="#0000FF">next<br>  
+end </font> a</font></p>    
+
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0">　</p>  
+
+<p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">调用时形如：</font><font face="Courier New" size="2">a=Max(b,c,d)</font></p>
+
+</body>
+
+</html>

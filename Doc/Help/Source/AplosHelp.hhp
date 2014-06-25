@@ -1,0 +1,48 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AplosHelp.chm
+Contents file=aplos.hhc
+Default topic=封面.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x804 中文(中国)
+
+
+[FILES]
+introduction.htm
+comment.htm
+keywords.htm
+编译指令.htm
+变量.htm
+表达式.htm
+常数.htm
+赋值语句.htm
+repeat.htm
+while.htm
+标号.htm
+数组.htm
+Call.htm
+for.htm
+if.htm
+lock.htm
+Break.htm
+Exit.htm
+Inc.htm
+Include.htm
+thread.htm
+push.htm
+Return.htm
+deffunc.htm
+系统变量.htm
+类型.htm
+普通变量.htm
+计时器.htm
+StdLib.htm
+系统函数.htm
+教程：编辑器1.htm
+语言简介.htm
+封面.htm
+
+[INFOTYPES]
+

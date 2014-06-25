@@ -1,0 +1,119 @@
+///////////////////////////////////////////////////////////////////////
+
+Identifier     [a-zA-Z_][a-zA-Z_0-9]*
+Decimal        -?[0-9]+
+Hex            "0x"[0-9a-fA-F]+
+Integer        {Decimal}|{Hex}
+Float          ({Decimal})?"."[0-9]+
+String         \"[^\"\n]*\"
+Constant       {Decimal}|{Hex}|{Float}|{String}
+
+///////////////////////////////////////////////////////////////////////
+BNF Syntax:
+
+Program ::= Module ...
+         
+Module ::= ["module" Identifier] "{" [FuntionDef|ClassDef|StatementBlock]..."}"
+
+VarDefStmt ::= [Modifiers]VarDefList ";"
+
+VarDefList ::= VarDef ["," VarDef] ...
+
+VarDef ::= Identifier ["=" Expression]
+
+ConstDefStmt ::= [Modifiers] "const" ConstDefList ";"
+
+ConstDefList ::= ConstDef ["," ConstDef] ...
+
+ConstDef ::= Identifier "=" Expression
+
+Modifiers ::= ["static"]("public"|"private"|"protected")
+
+ClassDef ::= "class" Identifier ["("IdentList")"] "{" ClassBody "}" ";"
+
+IdentList := Identifier ["," Identifier]...
+
+ClassBody ::= [VarDefStmt|ConstDefStmt|FunctionDef] ...
+
+FunctionDef ::= [Modifiers] "function" Identifier "(" IdentList ")"
+
+Expression     ::= RelationalExpr [LogicalOp RelationalExpr]...
+
+RelationalExpr ::= AdditiveExpr [RelationalOp AdditiveExpr]...
+
+AdditiveExpr ::= Term [AdditiveOp Term]...
+
+Term ::= FactorExpr [MultiplicativeOp FactorExpr]...
+
+FactorExpr ::=  [UnaryOp] FactorExpr
+               | [UnaryOp] Factor
+
+Factor ::= "(" Expression ")"
+               | FunctionCall
+               | Designator
+               | Constant
+               | Identifier
+
+LogicalOp ::= "and"|"or"|"xor"
+
+RelationalOp ::= ">"|"<"|"=="|"<>"|">="|"<="|"->"
+
+AdditiveOp ::= "+"|"-"|"|"|"&"|"^"
+
+MultiplicativeOp ::= "*"|"\"|"%"|"<<"|">>"|">>>"
+
+UnaryOp ::= "+"|"-"|"!"|"not"
+
+Designator ::= Expression ["[" Expression "]" | "." Identifier]
+
+FunctionCall ::= Designator "(" ExpressionList ")"
+
+ExpressionList ::= Expression ["," Expression]...
+
+StatementBlock ::= Statement|StructStatement
+
+StructStatement ::= "{" [Statement ...] "}"
+
+Statement ::=   VarDefStmt
+         | ConstDefStmt
+         | ConditionStatement
+         | LoopStatement
+         | TRYStatement
+         | AssignStatement
+         | FunctionCall ";"
+         | JumpStatement
+
+ConditionStatement ::= IFStatement
+
+IFStatement ::= "if" "(" Expression ")" StatementBlock ["else" StatementBlock]
+
+LoopStatement ::= FORStatement1
+             |FORStatement2
+             |WHILEStatement
+             |REPEATStatement
+
+FORStatement1 ::= "for" Designator "=" Expression "to" Expression ["step" Expression ] StatementBlock
+
+FORStatement2 ::= "for" Designator "in" Expression StatementBlock
+
+WHILEStatement ::= "while" "(" Expression ")" StatementBlock
+
+REPEATStatement ::= "repeat"  StatementBlock "until" Expression ";"
+
+TRYStatement ::= "try" StatementBlock "catch" "(" Identifier ")" StatementBlock
+
+AssignStatement ::= Designator "=" Expression ";"
+
+JumpStatement ::= | RETURNStatement
+                  | BREAKStatement
+                  | CONTINUEStatement
+                  | THROWStatement
+
+RETURNStatement ::= "return" Expression ";"
+
+BREAKStatement ::= "break" ";"
+
+CONTINUEStatement ::= "continue" ";"
+
+THROWStatement ::= "throw" Expression ";"
+

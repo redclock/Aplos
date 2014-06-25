@@ -1,0 +1,5 @@
+compile result
+Compile Error:函数(AddStatic)参数太少.
+文件:d:\myworks\delphi\aplos\test\calcpi2.apl:
+有错误发生 行(48):
+AddStatic(0, "pi = ", 10, 10)

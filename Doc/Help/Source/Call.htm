@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Call语句</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none"><font color="#008000">Call语句</font></h1>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><b><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">call</span></b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">语句用来调用其他脚本文件,形式为:     
+<o:p>
+</o:p>    
+</span></p>
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><b><span style="font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+ZH-CN">call</span></b><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:ZH-CN"> 
+文件名<o:p>    
+</span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:3.9pt;
+mso-char-indent-count:.39;mso-char-indent-size:10.0pt;mso-layout-grid-align:
+none;text-autospace:none"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">文件名后的扩展名(.spt)可以省略。</span><span style="font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:ZH-CN"> 
+</o:p> 
+</span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">当被调用的脚本执行完毕，控制权返回到初始脚本的<b>call</b>语句的下一个语句。</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">用<a href="系统变量.htm">系统变量</a>_Level来检测当前脚本在被调用的哪一层。</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none"><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">下边一个例子</span><font size="2">recursion.gcs</font><span style="font-size: 10.0pt; font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">演示了<b>call</b>和_Level的用法</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><i><font size="2" face="Courier New">//recursion.gcs   
+</font><font size="2"><font color="#000080">  递归演示</font><font color="#008080"><br>
+</font></font></i><font size="2" face="Courier New"><b>public</b> a 1 <i><font color="#000080">        '</font></font><font color="#000080" size="2">公有变量 地址</font><font color="#000080">:#0001</font></i><font size="2" face="Courier New"><br>  
+<b>if</b> _Level=0 <i><font color="#000080">       '</font></i></font><i><font color="#000080" size="2">第一次运行</font></i><font size="2"><br>
+</font><font size="2" face="Courier New">&nbsp; a=1<br>  
+<b>else</b> <b>if</b>  _Level=10</font></p> 
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&nbsp;<b>exit</b><br>
+<b>endif</b><br>
+<b>inc</b> a<br>   
+<b>call</b> recursion <i><font color="#000080">        '</font></i></font><i><font color="#000080" size="2">递归</font></i><font size="2"><br>  
+</font><font size="2" face="Courier New"><b>dec</b> a<br>   
+W</font><font size="2">riteln</font><font size="2" face="Courier New">(a)  
+</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><br> 
+</font><font size="2">结果为：</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">10</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">9</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">8</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">7</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">6</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">5</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">4</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">3</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">2</font></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">1</font></p>
+
+</body>
+
+</html>

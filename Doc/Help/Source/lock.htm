@@ -1,0 +1,33 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>锁定</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center"><font color="#008000">锁定</font></h1>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><b><font size="3">脚本的运行状态有两种</font></b></p>
+<blockquote>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">脚本的运行状态有两种，锁定状态与非锁定状态。脚本开始的状态是非锁定的。</font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">你可以使用<b>lock</b>与<b>unlock</b>语句来改变锁定的状态。</font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><b><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">lock</span></b><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">语句:锁定脚本<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</span><b>unlock</b>语句:解除锁定</span></font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN"><o:p>
+</o:p>
+</span></font></p>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">锁定状态与非锁定状态的区别主要体现在<a href="thread.htm">多线程</a>状态下。</font></p>
+</blockquote>
+<blockquote>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">多线程的情况下，当脚本进入锁定状态时，其他的线程就没有运行的机会。</span></font></p>
+</blockquote>
+<p class="MsoNormal" align="left" style="text-align: left; text-indent: 3.9pt; mso-char-indent-count: .39; mso-char-indent-size: 10.0pt; mso-layout-grid-align: none; text-autospace: none; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><span style="font-family: 宋体; mso-hansi-font-family: Courier New; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">其他情况下，锁定与否对于执行结果是没有影响的，但非锁定状态的运行效率要高一点。</span></font></p>
+
+</body>
+
+</html>

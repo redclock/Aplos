@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>计时器</title>
+</head>
+
+<body  bgcolor="#FFFFCC">
+
+<h1 align="center"><font color="#008000">计时器</font></h1>
+<p><b>什么是计时器？</b></p>
+
+<blockquote>
+<p><font size="2">计时器脚本是指可以指定在某一时间被触发的脚本。你通过设定计时器来执行需要不断执行的脚本或设定在某一时间后运行脚本。计时器脚本是单独的一个线程。</font></p>
+
+</blockquote>
+<p><b><font size="3">使用计时器</font></b></p>
+
+<blockquote>
+  <p><font size="2">建立计时器要用AddTimer()函数。</font></p>
+
+  <p><font size="2">如：AddTimer(<font color="#FF0000">&quot;t2.spt&quot;</font>, 1000)表示1秒钟后运行t2.spt,返回值为计时器的id</font></p>  
+
+  <p><font size="2">要强制停止一个计时器，用</font> <font size="2">DelTimer(&lt;计时器id&gt;)</font></p> 
+
+  <p><font size="2">在计时器被建立到开始执行这一段时间，需要至少一个线程在一直运行，否则脚本会因没有线程而退出。</font></p>
+
+</blockquote>
+<p><b><font size="3">例：</font></b></p>
+
+<blockquote>
+
+  <p><font size="2">编译AddTimer.gcs和t2.apl，再执行AddTimer.apl。运行结果是每秒钟输出一个横线，输出十个。 
+  </font></p>
+
+</blockquote>
+
+</body>
+
+</html>

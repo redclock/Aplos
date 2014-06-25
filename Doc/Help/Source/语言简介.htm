@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>语言简介</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h1 align="center"><font color="#008000">语言简介</font></h1>
+<p><font size="3">A</font><font size="2">plos语言源文件以行来分隔。每一行的内容可能为：</font></p>
+<ul>
+  <li>
+    <p style="margin-top: 10; margin-bottom: 10"><font size="2">空行或<a href="comment.htm">注释</a>行</font></li>
+  <li>
+    <p style="margin-top: 10; margin-bottom: 10"><font size="2"><a href="编译指令.htm">编译指令</a></font></li>
+  <li>
+    <p style="margin-top: 10; margin-bottom: 10"><font size="2">以<a href="keywords.htm">关键字</a>开头的命令或控制语句</font></li>
+  <li>
+    <p style="margin-top: 10; margin-bottom: 10"><font size="2"><a href="赋值语句.htm">赋值语句</a></font></li>
+  <li>
+    <p style="margin-top: 10; margin-bottom: 10"><font size="2"><a href="表达式.htm">表达式</a>，一般为<a href="函数调用.htm">函数调用</a>，也可以是1+1一类的表达式单独成行</font></li>
+</ul>
+
+<p style="margin-top: 10; margin-bottom: 10"><font size="2">&nbsp;&nbsp;&nbsp;  
+一个源文件中可以用<a href="Include.htm">include</a>语句来将其他文件包含进来。</font><font size="2">一个脚本程序由零个或多个函数再加上一个主执行体构成。请参看<a href="deffunc.htm">函数声明和定义</a>。</font></p>
+<p><font size="2">函数之外的语句都是主执行体。</font></p> 
+<p><font size="2">脚本将在主执行体的第一个语句开始执行</font></p> 
+<p><font size="2">一个最初级的脚本的例子（只一行）：</font></p> 
+<p><font size="2">&nbsp;&nbsp;&nbsp; Writeln（<font color="#FF0000">&quot;Hello     
+World!&quot;</font>）</font></p> 
+<p><font size="2">用也可以有许多函数:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><b>&nbsp; </b>  <font color="#0000FF">function</font></font><font color="#0000FF">  
+</font> <font size="2"> f1(a)</font></p>  
+<p style="margin-top: 0; margin-bottom: 0"><font size="2">&nbsp;&nbsp; <font color="#0000FF">end</font></font></p>  
+<p style="margin-top: 0; margin-bottom: 0"></p>  
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF">&nbsp;&nbsp;  
+function</font> <font size="2"> f2(b)</font></p>    
+<p style="margin-top: 0; margin-bottom: 0"><font size="2">&nbsp; <font color="#000080">  
+</font><font color="#0000FF">end</font></font></p> 
+<p style="margin-top: 0; margin-bottom: 0"></p> 
+<p style="margin-top: 0; margin-bottom: 0"><font size="2">&nbsp;&nbsp; <i><font color="#008000">//main</font></i><br> 
+&nbsp;&nbsp; <font color="#0000FF">private</font> x <br>   
+&nbsp;&nbsp; f1(x)<br>  
+&nbsp;&nbsp; f2(10)</font></p>  
+<p style="margin-top: 10; margin-bottom: 10">　</p>
+
+</body>
+
+</html>
