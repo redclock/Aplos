@@ -1,7 +1,7 @@
 Aplos
 =====
 
-Scripting language
+Scripting language. The source code of the compiler is written in Delphi.
 
 ###Sample Code
 ```
